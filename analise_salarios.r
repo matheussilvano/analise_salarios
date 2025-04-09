@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 
 # Leitura da base de dados
-base <- read.csv("dados_salarios.csv")
+base <- read.csv("dados_salarios.csv", sep = ";")
 
 # 1) Amostra
 set.seed(19092005)  # Dia, mês e ano de nascimento
@@ -61,3 +61,4 @@ ggplot(salario_por_experiencia, aes(x = experiencia_mod, y = mediana)) +
     y = "Mediana do Salário (USD)"
   ) +
   theme_minimal()
+
